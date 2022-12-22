@@ -4,7 +4,7 @@
 <ul>
 <%= link_to "Back", articles_path %><br>
 <%= link_to "Edit", edit_article_path(@articles) %><br>
-<%= link_to "Destroy", articles_path(@articles), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%= link_to "Destroy", article_path(@articles), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 </ul>
 <h2>Add a Comment</h2>
 <%= form_with model: [ @articles, @articles.comments.build ] do |form| %>
